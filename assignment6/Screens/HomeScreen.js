@@ -5,19 +5,26 @@ import  AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const products = [
-    { id: '1', name: 'Office Wear', price: 120, image:require('../assets/dress1.png') },
+    { id: '1', name: 'Office Wear', price: 120,
+       image:require('../assets/dress1.png') },
 
-    { id: '2', name: 'Black', price: 120, image:require('../assets/dress2.png') },
+    { id: '2', name: 'Black', price: 160,
+       image:require('../assets/dress2.png') },
 
-    { id: '3', name: 'Church Wear', price: 120, image:require('../assets/dress3.png') },
+    { id: '3', name: 'Church Wear', price: 180,
+      image:require('../assets/dress3.png') },
 
-    { id: '4', name: 'Lamerei', price: 120, image:require('../assets/dress4.png') },
+    { id: '4', name: 'Lamerei', price: 150,
+       image:require('../assets/dress4.png') },
 
-    { id: '5', name: '21WN', price: 120, image:require('../assets/dress5.png') },
+    { id: '5', name: '21WN', price: 200,
+       image:require('../assets/dress5.png') },
 
-    { id: '6', name: 'Lopo', price: 120 , image:require('../assets/dress6.png')},
+    { id: '6', name: 'Lopo', price: 340 , 
+       image:require('../assets/dress6.png')},
 
-    { id: '7', name: 'Iame', price: 120, image:require('../assets/dress7.png') },
+    { id: '7', name: 'Iame', price: 400,
+       image:require('../assets/dress7.png') },
 ];
 
 export default function  HomeScreen({navigation}) {
@@ -74,7 +81,8 @@ return(
       <Image source={item.image} style={styles.image} />
 
       <Text>{item.name}</Text>
-      <Text>${item.price}</Text>
+     
+      <Text style={styles.price}>${item.price}</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => addToCart(item)}>
        <Image style={styles.add} source={require('../assets/add_circle.png')}/>
@@ -97,10 +105,6 @@ return(
 };
 
 const styles = StyleSheet.create({
-
-    menu:{
-
-    },
 
     Logo:{
       left:130,
@@ -142,15 +146,21 @@ const styles = StyleSheet.create({
         
       },
 
+     
+
       image: {
-        width: 120,
-        height: 160,
+        width: 150,
+        height: 190,
         marginBottom: 8,
       },
+
+     
 
       buttonText: {
         color: '#fff',
         textAlign: 'center',
+        fontWeight:'bold',
+        fontSize:20,
       },
       cartButton: {
         backgroundColor: '#28a745',

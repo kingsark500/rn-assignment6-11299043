@@ -40,6 +40,8 @@ export default function  CartScreen() {
   <Image style={styles.Logo} source={require('../assets/Logo.png')}/>
   <Image style={styles.search} source={require('../assets/Search.png')}/>
 
+  <Text style={styles.check}>CHECKOUT</Text>
+
       <FlatList
 
         data={cart}
@@ -51,7 +53,9 @@ export default function  CartScreen() {
 
             <Text>{item.name}</Text>
 
-            <Text styles={styles.monprice}>${item.price}</Text>
+
+
+            <Text style={styles.price}>${item.price}</Text>
 
             <TouchableOpacity style={styles.button} onPress={() => removeFromCart(item.id)}>
             <Image source={require('../assets/remove.png')}/>
@@ -70,11 +74,16 @@ const styles = StyleSheet.create({
 
   Logo:{
     left:130,
-    bottom:30
+    bottom:10
   },
   search:{
-    left:260,
-    bottom:55,
+    left:270,
+    bottom:40,
+  },
+
+  check:{
+    textAlign:'center',
+    fontSize:24,
   },
 
     container: {
@@ -86,6 +95,8 @@ const styles = StyleSheet.create({
       padding: 16,
      
     },
+
+    
 
    
 
