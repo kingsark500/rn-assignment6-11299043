@@ -35,6 +35,11 @@ export default function  CartScreen() {
 
   return (
     <View style={styles.container}>
+
+
+  <Image style={styles.Logo} source={require('../assets/Logo.png')}/>
+  <Image style={styles.search} source={require('../assets/Search.png')}/>
+
       <FlatList
 
         data={cart}
@@ -62,6 +67,16 @@ export default function  CartScreen() {
 };
 
 const styles = StyleSheet.create({
+
+  Logo:{
+    left:130,
+    bottom:30
+  },
+  search:{
+    left:260,
+    bottom:55,
+  },
+
     container: {
       flex: 1,
       padding: 16,
